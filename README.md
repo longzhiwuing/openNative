@@ -1,6 +1,6 @@
 #ionic android打开Activity的插件
 
-在国内和国外找不到相应的插件，所以自己写了一个简单的（比较low）。功能很简单，可以在ionic的controller里打开原生Activity的小插件。可以向Activity里传值，因为项目需要，还在这个插件里开发了一个打开pdf功能，不过这个是需要打开本地pdf查看程序的那种，不是很通用，不过我也实现了一个内置pdf查看器的插件，地址：可以参考下
+在国内和国外找不到相应的插件，所以自己写了一个简单的（比较low）。功能很简单，可以在ionic的controller里打开原生Activity的小插件。可以向Activity里传值，因为项目需要，还在这个插件里开发了一个打开pdf功能，不过这个是需要打开本地pdf查看程序的那种，不是很通用，不过我也实现了一个[内置pdf查看器](https://github.com/longzhiwuing/openPDF)的插件，可以参考下
 
 ##调用方法
 ```javascript
