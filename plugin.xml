@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" id="cordova-plugin-openNative"
+		version="1.0.0">
+
+    <name>openNative</name>
+    <description>Cordova openNative Plugin</description>
+    <license>Apache 2.0</license>
+    <keywords>cordova,openNative</keywords>
+
+	<engines>
+		<engine name="cordova" version=">=3.0.0"/>
+	</engines>
+  
+    <js-module src="www/openNative.js" name="openNative">
+        <clobbers target="openNative" />
+    </js-module>
+
+    <!-- android -->
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="openNative">
+                <param name="android-package" value="com.cecdata.cordova.openNative.OpenNativePlugin"/>
+            </feature>
+        </config-file>
+		
+		<!--添加权限-->
+		<config-file target="AndroidManifest.xml" parent="/*">  
+            <uses-permission android:name="android.permission.INTERNET" />
+			<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+			<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+			<uses-permission android:name="android.permission.READ_PHONE_STATE" />
+			<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+			<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+        </config-file> 
+	
+		<!--编译-->
+        <source-file src="src/com/cecdata/cordova/openNative/OpenNativePlugin.java" target-dir="src/com/cecdata/cordova/openNative"/>
+
+    </platform>
+
+</plugin>
